@@ -7,7 +7,7 @@ export function NavBar() {
             <div className="container">
                 <div className="title">Litbt Weather</div>
                 <div className="github">
-                    <a href="https://github.com/gthole/">
+                    <a href="https://github.com/gthole/litbt-weather">
                         <img
                             src="/img/GitHub-Mark-Light-32px.png"
                             alt="View on Github"
