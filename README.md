@@ -1,3 +1,15 @@
 # Litbt Weather
-A small weather app written against the National Weather Service API and
-OpenStreetMap for
+A weather app written in React, backed by the National Weather Service API and
+OpenStreetMap.
+
+This app borrows heavily from the DarkSky web UI, which was bought by Apple and
+decommissioned.
+
+### Running Locally
+```
+# Using docker:
+$ docker-compose up
+
+# With npm:
+$ npm start
+```
