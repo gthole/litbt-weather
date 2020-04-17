@@ -1,0 +1,47 @@
+.Extended {
+    margin-top: 50px;
+}
+
+.Extended .row {
+    margin: 40px 0;
+    display: flex;
+    font-size: 18px;
+}
+
+.Extended .row div:first-child {
+    font-size: 30px;
+    min-width: 50px;
+    text-align: center;
+}
+
+.Extended .row div:nth-child(2) {
+    min-width: 50px;
+    margin-left: 15px;
+    margin-right: 40px;
+}
+
+.Extended .row div:not(:first-child) {
+    padding-top: 5px;
+}
+
+.Extended .row .bar {
+    height: 20px;
+    flex-grow: 1;
+    background-color: #333;
+    border-radius: 15px;
+    position: relative;
+}
+
+.Extended .row .bar .bar-prefix {
+    position: absolute;
+    left: -35px;
+}
+
+.Extended .row .bar .bar-suffix {
+    position: absolute;
+    right: -38px;
+}
+
+.ExtendedRow div:first-child {
+    cursor: pointer;
+}

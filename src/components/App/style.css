@@ -1,0 +1,17 @@
+.App {
+    padding-bottom: 80px;
+}
+
+p {
+    color: #333;
+}
+
+.loading {
+    opacity: 0.3;
+}
+
+@media only screen and (max-width: 600px) {
+    .forecast {
+        padding: 0 5px;
+    }
+}

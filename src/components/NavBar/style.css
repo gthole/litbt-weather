@@ -1,0 +1,15 @@
+.NavBar {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    padding: 22px 10px 15px 10px;
+}
+
+.NavBar .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.NavBar .container .title {
+    font-size: 22px;
+}

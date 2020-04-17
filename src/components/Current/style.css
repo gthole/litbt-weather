@@ -1,0 +1,27 @@
+.Current {
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.Current .summary {
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.Current .summary i {
+    font-size: 48px;
+    margin-right: 15px;
+}
+
+.Current .detailedForecast {
+    line-height: 1.0;
+    margin-top: 10px;
+    font-weight: 10;
+    font-size: 24px;
+}
+
+.Current .detailedForecast p:not(:first-child) {
+    font-size: 16px;
+}
+
