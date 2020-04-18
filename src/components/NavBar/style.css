@@ -10,6 +10,13 @@
     justify-content: space-between;
 }
 
-.NavBar .container .title {
+.NavBar .container .title a {
+    color: #fff;
     font-size: 22px;
+    text-decoration: none;
+}
+
+
+.NavBar .container .title a:visited {
+    color: #fff;
 }
