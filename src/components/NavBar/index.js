@@ -5,7 +5,9 @@ export function NavBar() {
     return (
         <div className="NavBar">
             <div className="container">
-                <div className="title">Litbt Weather</div>
+                <div className="title">
+                    <a href="/">Litbt Weather</a>
+                </div>
                 <div className="github">
                     <a href="https://github.com/gthole/litbt-weather">
                         <img

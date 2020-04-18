@@ -1,7 +1,6 @@
 const base = 'https://api.weather.gov'
 
 function request(resource) {
-    console.log('NWS request: ' + resource);
     return fetch(`${base}${resource}`).then(r => r.json());
 }
 

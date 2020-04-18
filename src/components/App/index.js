@@ -15,7 +15,6 @@ function App() {
     function saveAndSetUserLocation(ul) {
         localStorage.setItem('userLocation', JSON.stringify(ul));
         setUserLocation(ul);
-        console.log('getting forecast');
         getForecast(ul).then((forecast) => {
             setForecast(forecast);
             setLoading(false)
