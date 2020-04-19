@@ -13,7 +13,7 @@ function findRange(hourly) {
 
 export function Extended(props) {
     if (!props.forecast) return '';
-    const daytimes = props.forecast.daily.filter(d => d.isDaytime);
+    const daytimes = props.forecast.daily.filter((d, i) => i !== 0 && d.isDaytime);
 
     const [min, max] = findRange(props.forecast.hourly);
 
@@ -24,10 +24,12 @@ export function Extended(props) {
         const [dayMin, dayMax] = findRange(dayHourly);
         d.minTemp = dayMin;
         d.maxTemp = dayMax;
+        d.hours = dayHourly;
     });
 
     return (
         <div className="Extended">
+            <div className="section-title">Extended Forecast</div>
             {daytimes.map((d, i) => <ExtendedRow key={i} day={d} min={min} max={max} />)}
         </div>
     );

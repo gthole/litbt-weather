@@ -44,5 +44,6 @@
     "nhi_tsra": "night-storm-showers",
     "tsra_hi": "day-thunderstorm",
     "ntsra_hi": "night-thunderstorm",
-    "tsra_sct": "thunderstorm"
+    "tsra_sct": "thunderstorm",
+    "wind_few": "strong-wind"
 }

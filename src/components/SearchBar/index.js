@@ -19,6 +19,7 @@ export function SearchBar(props) {
             setSearchTerm(userLocation.display);
         } catch (err) {
             console.log(err);
+            props.setError('Could not find a location to match.');
         }
     }
 

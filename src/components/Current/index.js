@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.css';
 import { Icon } from '../Icon';
+import { Timeline } from '../Timeline';
 
 export function Current(props) {
     if (!props.forecast) return '';
@@ -24,6 +25,7 @@ export function Current(props) {
             <div className="detailedForecast">
                 { detailed.map((s, i) => (<p key={ 'forecast-' + i }>{ s }</p>)) }
             </div>
+            <Timeline hours={ props.forecast.hourly.slice(0, 23) } />
         </div>
     );
 }

@@ -2,8 +2,14 @@
     margin-top: 50px;
 }
 
+.Extended .section-title {
+    color: #666;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 .Extended .row {
-    margin: 40px 0;
+    margin: 40px 0 10px 0;
     display: flex;
     font-size: 18px;
 }
@@ -25,6 +31,7 @@
 }
 
 .Extended .row .bar {
+    width: 100%;
     height: 20px;
     flex-grow: 1;
     background-color: #333;
@@ -42,6 +49,24 @@
     right: -38px;
 }
 
-.ExtendedRow div:first-child {
+.ExtendedRow {
+    margin: 50px 0;
+}
+
+.ExtendedRow div.forecast:first-child {
     cursor: pointer;
+}
+
+.ExtendedDetails {
+    padding-bottom: 40px;
+    border-bottom: 1px solid lightgray;
+}
+
+.ExtendedDetails div.summary {
+    padding: 10px;
+}
+
+.ExtendedDetails div.description {
+    padding: 0 10px 10px 10px;
+    font-weight: 10;
 }

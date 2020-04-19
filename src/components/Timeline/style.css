@@ -1,0 +1,114 @@
+.Timeline {
+    overflow: auto;
+}
+
+.Timeline .timeline-container {
+    width: 768px;
+    padding: 0 16px;
+}
+
+.Timeline .timeline-row {
+    display: flex;
+}
+
+.Timeline .timeline-row div {
+    flex-grow: 1;
+}
+
+.Timeline .timeline-blocks {
+    height: 40px;
+}
+
+.Timeline .timeline-section {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: hidden;
+    text-align: center;
+    padding-top: 14px;
+    font-size: 12px;
+}
+
+.Timeline .timeline-ticks div {
+    width: 32px;
+    margin-top: 10px;
+    height: 8px;
+    border-left: 1px solid #999;
+}
+
+.Timeline .timeline-hours {
+    text-align: left;
+    margin-top: 8px;
+    color: #666;
+    font-size: 12px;
+}
+
+.Timeline .timeline-hours div {
+    width: 32px;
+}
+
+.Timeline .timeline-temp {
+    margin-top: 5px;
+    color: #333;
+    font-size: 16px;
+}
+
+.Timeline .timeline-blocks div:first-child {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.Timeline .timeline-blocks div:last-child {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/* Hide text on smaller timeline sections */
+.Timeline .timeline-section-1 span {
+    visibility: hidden
+}
+
+.Timeline .timeline-blocks .Mostly-Cloudy.timeline-section-2 span,
+.Timeline .timeline-blocks .Partly-Cloudy.timeline-section-2 span {
+    visibility: hidden
+}
+
+
+/*
+ * Conditions coloring
+ */
+
+.Timeline .timeline-blocks .Clear {
+    background-color: #eeeef5;
+}
+
+.Timeline .timeline-blocks .Partly-Cloudy {
+    background-color: lightgray;
+}
+
+.Timeline .timeline-blocks .Mostly-Cloudy {
+    background-color: gray;
+    color: #fff;
+}
+
+.Timeline .timeline-blocks .Fog {
+    background-color: gray;
+}
+
+.Timeline .timeline-blocks .Overcast {
+    background-color: #999;
+}
+
+.Timeline .timeline-blocks .Rain {
+    background-color: #4a80c7;
+    color: #fff;
+}
+
+.Timeline .timeline-blocks .Light-Rain {
+    background-color: #80a5d6;
+    color: #fff;
+}
+
+.Timeline .timeline-blocks .Snow {
+    background-color: purple;
+    color: #fff;
+}

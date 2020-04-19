@@ -10,8 +10,9 @@ export function ForecastBar(props) {
         return (range(upper) - range(lower)) + '%';
     }
 
-    const dayName =  new Date(props.day.startTime)
-        .toLocaleString('en-US', {weekday: 'short'}) ;
+    const start = new Date(props.day.startTime);
+    const dayName = start.valueOf() < Date.now() ? 'Today' :
+        start.toLocaleString('en-US', {weekday: 'short'}) ;
 
     return (
         <div className="row">

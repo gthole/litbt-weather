@@ -1,24 +1,25 @@
 import React, { useState } from 'react';
 import { ForecastBar } from './ForecastBar';
+import { ExtendedDetails } from './ExtendedDetails';
 
 export function ExtendedRow(props) {
     const [expanded, setExpanded] = useState(false);
 
-    let expandedDetails = '';
+    let details = '';
     if (expanded) {
-        expandedDetails = <div><p>{ props.day.detailedForecast }</p></div>;
+        details = <ExtendedDetails day={ props.day } />;
     }
 
     return (
         <div className="ExtendedRow">
-            <div onClick={ () => setExpanded(!expanded) }>
+            <div className="forecast" onClick={ () => setExpanded(!expanded) }>
                 <ForecastBar
                     day={props.day}
                     min={props.min}
                     max={props.max}
                 ></ForecastBar>
             </div>
-            { expandedDetails }
+            { details }
         </div>
     )
 }

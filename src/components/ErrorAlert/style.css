@@ -1,0 +1,22 @@
+.ErrorAlert {
+    cursor: pointer;
+    display: flex;
+    padding: 20px 10px;
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    right: 20px;
+    background-color: #fff5f5;
+    border: 1px solid #f56565;
+    border-radius: 5px;
+}
+
+.ErrorAlert .title {
+    font-weight: bold;
+    color: #c53030;
+}
+
+.ErrorAlert .body {
+    padding-left: 10px;
+    color: #c53030;
+}

@@ -37,7 +37,7 @@ async function reverseName(lat, lon) {
 }
 
 export async function locationSearch(input) {
-    const data = await fetch(`${base}/search?q=${input}&format=json`)
+    const data = await fetch(`${base}/search?q=${input}&countrycodes=US&format=json`)
             .then(r => r.json());
 
     // Pick the most relevant result

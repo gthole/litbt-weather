@@ -6,3 +6,10 @@ export function groupBy(items, func) {
         return p;
     }, {});
 }
+
+export function formatTime(t) {
+    const d = new Date(t);
+    let h = d.getHours() % 12;
+    if (h === 0) h = 12;
+    return `${h}${ d.getHours() >= 12 ? 'pm' : 'am' }`;
+}
