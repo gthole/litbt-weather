@@ -67,6 +67,7 @@
 }
 
 .ExtendedDetails div.description {
+    color: #333;
     padding: 0 10px 10px 10px;
     font-weight: 10;
 }
