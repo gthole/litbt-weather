@@ -1,29 +1,12 @@
 import React from 'react';
 import './style.css';
-import { formatTime } from '../../utility';
-
-const matchers = [
-    {r: /^Cloudy$/, k: 'Overcast'},
-    {r: /^Mostly Cloudy$/, k: 'Mostly Cloudy'},
-    {r: /^Partly (Cloudy|Sunny)$/, k: 'Partly Cloudy'},
-    {r: /\bFog/, k: 'Fog'},
-    {r: /(Sunny|Clear)/, k: 'Clear'},
-    {r: /Light Rain/, k: 'Light Rain'},
-    {r: /^Rain( Showers)?/, k: 'Rain'},
-    {r: /Thunderstorm/, k: 'Rain'},
-    {r: /Rain Showers$/, k: 'Light Rain'},
-    {r: /Snow/, k: 'Snow'},
-];
+import { extractIcon, formatTime } from '../../utility';
 
 export function Timeline(props) {
+
     props.hours.forEach((h) => {
-        for (const matcher of matchers) {
-            if (h.shortForecast.match(matcher.r)) {
-                h.key = matcher.k;
-                break;
-            }
-        }
-        h.key = h.key || 'Unknown';
+        const [resource] = extractIcon(h.icon);
+        h.key = resource ? resource.section : 'Unknown';
     });
 
     const sections = props.hours.reduce((s, h, i) => {

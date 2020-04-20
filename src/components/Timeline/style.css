@@ -77,27 +77,34 @@
  * Conditions coloring
  */
 
+.Timeline .timeline-blocks .Hot,
+.Timeline .timeline-blocks .Cold,
 .Timeline .timeline-blocks .Clear {
-    background-color: #eeeef5;
+    background-color: #f7fafc;
 }
 
 .Timeline .timeline-blocks .Partly-Cloudy {
-    background-color: lightgray;
+    background-color: #e2e8f0;
 }
 
 .Timeline .timeline-blocks .Mostly-Cloudy {
-    background-color: gray;
+    background-color: #cbd5e0;
+}
+
+.Timeline .timeline-blocks .Dust,
+.Timeline .timeline-blocks .Smoke,
+.Timeline .timeline-blocks .Haze,
+.Timeline .timeline-blocks .Fog {
+    background-color: #a0aec0;
     color: #fff;
 }
 
-.Timeline .timeline-blocks .Fog {
-    background-color: gray;
-}
-
 .Timeline .timeline-blocks .Overcast {
-    background-color: #999;
+    background-color: #718096;
+    color: #fff;
 }
 
+.Timeline .timeline-blocks .Storm,
 .Timeline .timeline-blocks .Rain {
     background-color: #4a80c7;
     color: #fff;
@@ -108,7 +115,11 @@
     color: #fff;
 }
 
+.Timeline .timeline-blocks .Blizzard,
+.Timeline .timeline-blocks .Sleet,
 .Timeline .timeline-blocks .Snow {
     background-color: purple;
     color: #fff;
 }
+
+

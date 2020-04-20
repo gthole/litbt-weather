@@ -1,0 +1,274 @@
+{
+    "skc": {
+        "icon": {
+            "day": "day-sunny",
+            "night": "night-clear"
+        },
+        "section": "Clear",
+        "description": "Fair/clear"
+    },
+    "few": {
+        "icon": {
+            "day": "day-sunny",
+            "night": "night-clear"
+        },
+        "section": "Clear",
+        "description": "A few clouds"
+    },
+    "sct": {
+        "icon": {
+            "day": "day-sunny-overcast",
+            "night": "alt-night-partly-cloudy"
+        },
+        "section": "Partly Cloudy",
+        "description": "Partly cloudy"
+    },
+    "bkn": {
+        "icon": {
+            "day": "day-cloudy",
+            "night": "night-alt-cloudy"
+        },
+        "section": "Mostly Cloudy",
+        "description": "Mostly cloudy"
+    },
+    "ovc": {
+        "icon": {
+            "day": "cloudy",
+            "night": "cloudy"
+        },
+        "section": "Overcast",
+        "description": "Overcast"
+    },
+    "wind_skc": {
+        "icon": {
+            "day": "day-windy",
+            "night": "night-windy"
+        },
+        "section": "Clear",
+        "description": "Fair/clear and windy"
+    },
+    "wind_few": {
+        "icon": {
+            "day": "day-windy",
+            "night": "strong-wind"
+        },
+        "section": "Clear",
+        "description": "A few clouds and windy"
+    },
+    "wind_sct": {
+        "icon": {
+            "day": "day-cloudy-gusts",
+            "night": "night-alt-cloudy-gusts"
+        },
+        "section": "Partly Cloudy",
+        "description": "Partly cloudy and windy"
+    },
+    "wind_bkn": {
+        "icon": {
+            "day": "cloudy-gusts",
+            "night": "cloudy-gusts"
+        },
+        "section": "Mostly Cloudy",
+        "description": "Mostly cloudy and windy"
+    },
+    "wind_ovc": {
+        "icon": {
+            "day": "cloudy-gusts",
+            "night": "cloudy-gusts"
+        },
+        "section": "Overcast",
+        "description": "Overcast and windy"
+    },
+    "snow": {
+        "icon": {
+            "day": "wi-snow",
+            "night": "wi-snow"
+        },
+        "section": "Snow",
+        "description": "Snow"
+    },
+    "rain_snow": {
+        "icon": {
+            "day": "rain-mix",
+            "night": "rain-mix"
+        },
+        "section": "Rain",
+        "description": "Rain/snow"
+    },
+    "rain_sleet": {
+        "icon": {
+            "day": "rain-mix",
+            "night": "rain-mix"
+        },
+        "section": "Sleet",
+        "description": "Rain/sleet"
+    },
+    "snow_sleet": {
+        "icon": {
+            "day": "sleet",
+            "night": "sleet"
+        },
+        "section": "Sleet",
+        "description": "Rain/sleet"
+    },
+    "fzra": {
+        "icon": {
+            "day": "sleet",
+            "night": "sleet"
+        },
+        "section": "Sleet",
+        "description": "Freezing rain"
+    },
+    "rain_fzra": {
+        "icon": {
+            "day": "rain-mix",
+            "night": "rain-mix"
+        },
+        "section": "Rain",
+        "description": "Rain/freezing rain"
+    },
+    "snow_fzra": {
+        "icon": {
+            "day": "sleet",
+            "night": "sleet"
+        },
+        "section": "Sleet",
+        "description": "Freezing rain/snow"
+    },
+    "sleet": {
+        "icon": {
+            "day": "sleet",
+            "night": "sleet"
+        },
+        "section": "Sleet",
+        "description": "Sleet"
+    },
+    "rain": {
+        "icon": {
+            "day": "rain",
+            "night": "rain"
+        },
+        "section": "Rain",
+        "description": "Rain"
+    },
+    "rain_showers": {
+        "icon": {
+            "day": "showers",
+            "night": "showers"
+        },
+        "section": "Light Rain",
+        "description": "Rain showers (high cloud cover)"
+    },
+    "rain_showers_hi": {
+        "icon": {
+            "day": "day-showers",
+            "night": "night-alt-showers"
+        },
+        "section": "Light Rain",
+        "description": "Rain showers (low cloud cover)"
+    },
+    "tsra": {
+        "icon": {
+            "day": "thunderstorm",
+            "night": "thunderstorm"
+        },
+        "section": "Rain",
+        "description": "Thunderstorm (high cloud cover)"
+    },
+    "tsra_sct": {
+        "icon": {
+            "day": "storm-showers",
+            "night": "storm-showers"
+        },
+        "section": "Light Rain",
+        "description": "Thunderstorm (medium cloud cover)"
+    },
+    "tsra_hi": {
+        "icon": {
+            "day": "day-storm-showers",
+            "night": "night-alt-storm-showers"
+        },
+        "section": "Light Rain",
+        "description": "Thunderstorm (low cloud cover)"
+    },
+    "tornado": {
+        "icon": {
+            "day": "tornado",
+            "night": "tornado"
+        },
+        "section": "Storm",
+        "description": "Tornado"
+    },
+    "hurricane": {
+        "icon": {
+            "day": "hurricane",
+            "night": "hurricane"
+        },
+        "section": "Storm",
+        "description": "Hurricane conditions"
+    },
+    "tropical_storm": {
+        "icon": {
+            "day": "hurricane",
+            "night": "hurricane"
+        },
+        "section": "Storm",
+        "description": "Tropical storm conditions"
+    },
+    "dust": {
+        "icon": {
+            "day": "dust",
+            "night": "dust"
+        },
+        "section": "Dust",
+        "description": "Dust"
+    },
+    "smoke": {
+        "icon": {
+            "day": "smoke",
+            "night": "smoke"
+        },
+        "section": "Smoke",
+        "description": "Smoke"
+    },
+    "haze": {
+        "icon": {
+            "day": "fog",
+            "night": "fog"
+        },
+        "section": "Haze",
+        "description": "Haze"
+    },
+    "hot": {
+        "icon": {
+            "day": "wi-hot",
+            "night": "wi-hot"
+        },
+        "section": "Hot",
+        "description": "Hot"
+    },
+    "cold": {
+        "icon": {
+            "day": "snowflake-cold",
+            "night": "snowflake-cold"
+        },
+        "section": "Cold",
+        "description": "Cold"
+    },
+    "blizzard": {
+        "icon": {
+            "day": "snow-wind",
+            "night": "snow-wind"
+        },
+        "section": "Snow",
+        "description": "Blizzard"
+    },
+    "fog": {
+        "icon": {
+            "day": "fog",
+            "night": "fog"
+        },
+        "section": "Fog",
+        "description": "Fog/mist"
+    }
+}
