@@ -15,11 +15,11 @@ export function ForecastBar(props) {
         start.toLocaleString('en-US', {weekday: 'short'}) ;
 
     return (
-        <div className="row">
-            <div>
+        <div className="ForecastBar row">
+            <div className="icon">
                 <Icon icon={ props.day.icon } daytime={ true }></Icon>
             </div>
-            <div>
+            <div className="dayName">
                 { dayName }
             </div>
             <div style={{width: width(props.min, props.day.minTemp)}}>&nbsp;</div>
@@ -28,7 +28,7 @@ export function ForecastBar(props) {
                 <span className="bar-suffix">{ props.day.maxTemp }°</span>
             </div>
             <div style={{width: width(props.day.maxTemp, props.max)}}>&nbsp;</div>
-            <div style={{width: '42px'}}>&nbsp;</div>
+            <div className="endcap">&nbsp;</div>
         </div>
     )
 }

@@ -14,20 +14,20 @@
     font-size: 18px;
 }
 
-.Extended .row div:first-child {
+.ForecastBar .icon {
     font-size: 30px;
     min-width: 50px;
     text-align: center;
 }
 
-.Extended .row div:nth-child(2) {
+.ForecastBar .dayName {
     min-width: 50px;
     margin-left: 15px;
     margin-right: 40px;
 }
 
-.Extended .row div:not(:first-child) {
-    padding-top: 5px;
+.ForecastBar.row div:not(:first-child) {
+    padding-top: 7px;
 }
 
 .Extended .row .bar {
@@ -70,4 +70,16 @@
     color: #333;
     padding: 0 10px 10px 10px;
     font-weight: 10;
+}
+
+.ForecastBar .endcap {
+    width: 78px;
+}
+
+@media only screen and (max-width: 340px) {
+    .ForecastBar .dayName {
+        min-width: 40px;
+        margin-left: 5px;
+        margin-right: 40px;
+    }
 }
