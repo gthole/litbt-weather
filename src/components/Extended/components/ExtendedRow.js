@@ -1,14 +1,10 @@
 import React, { useState } from 'react';
+import { CSSTransition } from 'react-transition-group';
 import { ForecastBar } from './ForecastBar';
 import { ExtendedDetails } from './ExtendedDetails';
 
 export function ExtendedRow(props) {
     const [expanded, setExpanded] = useState(false);
-
-    let details = '';
-    if (expanded) {
-        details = <ExtendedDetails day={ props.day } />;
-    }
 
     return (
         <div className="ExtendedRow">
@@ -19,7 +15,13 @@ export function ExtendedRow(props) {
                     max={props.max}
                 ></ForecastBar>
             </div>
-            { details }
+            <CSSTransition
+                    in={expanded}
+                    timeout={400}
+                    classNames='openSection'
+                    unmountOnExit>
+                <ExtendedDetails day={ props.day } />
+            </CSSTransition>
         </div>
     )
 }

@@ -6,8 +6,14 @@ p {
     color: #333;
 }
 
+.not-loading {
+    opacity: 1;
+    transition: opacity 200ms ease-in;
+}
+
 .loading {
     opacity: 0.3;
+    transition: opacity 200ms ease-out;
 }
 
 @media only screen and (max-width: 600px) {

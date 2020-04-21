@@ -46,7 +46,7 @@ function App() {
                 setLoading={setLoading}
                 setError={setError}
             ></SearchBar>
-            <div className={'forecast container' + (loading ? ' loading' : '')}>
+            <div className={'forecast container ' + (loading ? 'loading' : 'not-loading')}>
                 <Current forecast={forecast}></Current>
                 <Extended forecast={forecast}></Extended>
             </div>

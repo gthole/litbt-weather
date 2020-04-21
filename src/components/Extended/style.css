@@ -83,3 +83,29 @@
         margin-right: 40px;
     }
 }
+
+.openSection-enter {
+  opacity: 0;
+  max-height: 0;
+}
+
+.openSection-enter-active {
+  opacity: 1;
+  max-height: 220px;
+  overflow-y: hidden;
+  transition: max-height 200ms ease-in, opacity 300ms ease-in;
+}
+
+.openSection-exit {
+  opacity: 1;
+  max-height: 220px;
+  /* This prevents there being a jitter at the end. I hate it though. */
+  margin-bottom: -51px;
+}
+
+.openSection-exit-active {
+  opacity: 0;
+  max-height: 0;
+  overflow-y: hidden;
+  transition: max-height 200ms ease-out, opacity 100ms ease-out;
+}

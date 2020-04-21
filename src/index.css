@@ -31,3 +31,7 @@ button:hover {
 a {
     color: #4a80c7;
 }
+
+input:focus, textarea:focus, select:focus, button:focus {
+    outline: none;
+}
