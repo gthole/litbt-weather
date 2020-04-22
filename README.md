@@ -13,3 +13,14 @@ $ docker-compose up
 # With npm:
 $ npm start
 ```
+
+### Running in Production
+
+```yaml
+version: '3'
+
+services:
+    web:
+        image: 'gthole/litbt-weather'
+        restart: 'always'
+```
