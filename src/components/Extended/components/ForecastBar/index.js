@@ -1,5 +1,6 @@
 import React from 'react';
-import { Icon } from '../../Icon';
+import './style.css';
+import { Icon } from '../../../Icon';
 
 export function ForecastBar(props) {
     function range(num) {
@@ -15,17 +16,17 @@ export function ForecastBar(props) {
         start.toLocaleString('en-US', {weekday: 'short'}) ;
 
     return (
-        <div className="ForecastBar row">
-            <div className="icon">
+        <div className="ForecastBar">
+            <div className="forecast-icon">
                 <Icon icon={ props.day.icon } daytime={ true }></Icon>
             </div>
-            <div className="dayName">
+            <div className="day-name">
                 { dayName }
             </div>
             <div style={{width: width(props.min, props.day.minTemp)}}>&nbsp;</div>
-            <div className="bar">
-                <span className="bar-prefix">{ props.day.minTemp }°</span>
-                <span className="bar-suffix">{ props.day.maxTemp }°</span>
+            <div className="range-bar">
+                <span className="range-bar-prefix">{ props.day.minTemp }°</span>
+                <span className="range-bar-suffix">{ props.day.maxTemp }°</span>
             </div>
             <div style={{width: width(props.day.maxTemp, props.max)}}>&nbsp;</div>
             <div className="endcap">&nbsp;</div>

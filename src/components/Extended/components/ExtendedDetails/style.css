@@ -1,0 +1,16 @@
+.ExtendedDetails {
+    padding-bottom: 40px;
+    border-bottom: 1px solid lightgray;
+}
+
+.ExtendedDetails .summary {
+    padding: 10px;
+}
+
+.ExtendedDetails .description {
+    color: #333;
+    padding: 0 10px 10px 10px;
+    font-weight: 10;
+}
+
+

@@ -1,0 +1,9 @@
+.ExtendedRow {
+    margin: 50px 0;
+}
+
+.ExtendedRow div.forecast:first-child {
+    cursor: pointer;
+}
+
+
