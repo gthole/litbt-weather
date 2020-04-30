@@ -1,4 +1,9 @@
 .AlertsSummary {
+    display: flex;
+    justify-content: center;
+}
+
+.AlertsSummary .alert-button {
     padding: 10px 20px;
     text-align: center;
     font-size: 24px;
@@ -6,10 +11,6 @@
     cursor: pointer;
     border: 1px solid #b7791f;
     border-radius: 5px;
-    width: 120px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .AlertsSummary .alert-icon {

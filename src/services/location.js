@@ -28,13 +28,17 @@ async function reverseName(lat, lon) {
 
     const addr = data.address;
     const city = addr.village || addr.town || addr.city;
+    const region = addr.postcode ? `${addr.state} ${addr.postcode}` : addr.state;
     if (addr.neighbourhood && city) {
-        return `${addr.neighbourhood}, ${city}, ${addr.state} ${addr.postcode}`;
+        return `${addr.neighbourhood}, ${city}, ${region}`;
     }
     if (city) {
-        return `${city}, ${addr.state} ${addr.postcode}`;
+        return `${city}, ${region}`;
     }
-    return `${addr.state} ${addr.postcode}`;
+    if (addr.neighbourhood) {
+        return `${addr.neighbourhood}, ${region}`;
+    }
+    return region;
 }
 
 export async function locationSearch(input) {

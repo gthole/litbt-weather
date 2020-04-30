@@ -10,9 +10,10 @@ export function Alerts({forecast}) {
 
     return (
         <div className="Alerts">
-            <div onClick={ () => setShowModal(!showModal) }>
-                <AlertsSummary alerts={ forecast.alerts } />
-            </div>
+            <AlertsSummary
+                alerts={ forecast.alerts }
+                setShowModal={ setShowModal }
+            />
             <AlertsModal
                 alerts={ forecast.alerts }
                 show={ showModal }

@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons'
 import './style.css';
 
-export function AlertsSummary({alerts}) {
+export function AlertsSummary({alerts, setShowModal}) {
     let msg;
     if (alerts.length > 1) {
         msg = `${alerts.length} Alerts`;
@@ -12,8 +12,10 @@ export function AlertsSummary({alerts}) {
     }
     return (
         <div className="AlertsSummary">
-            <FontAwesomeIcon icon={faExclamationTriangle} className="alert-icon"/>
-            { msg }
+            <div className="alert-button" onClick={ () => setShowModal(true) }>
+                <FontAwesomeIcon icon={faExclamationTriangle} className="alert-icon"/>
+                { msg }
+            </div>
         </div>
     );
 }
