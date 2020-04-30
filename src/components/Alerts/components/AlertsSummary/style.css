@@ -7,10 +7,15 @@
     padding: 10px 20px;
     text-align: center;
     font-size: 24px;
-    color: #b7791f;
+    color: #dd6b20;
     cursor: pointer;
-    border: 1px solid #b7791f;
+    border: 1px solid #dd6b20;
     border-radius: 5px;
+}
+
+
+.AlertsSummary .alert-button:hover {
+    background-color: #fffaf0;
 }
 
 .AlertsSummary .alert-icon {
