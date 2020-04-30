@@ -8,7 +8,7 @@ async function coordsToLocation(latitude, longitude) {
         reverseName(latitude, longitude)
     ]);
 
-    const {office, gridX, gridY} = gridpointRes;
+    const {zoneId, office, gridX, gridY} = gridpointRes;
 
     return {
         key: `${office}/${gridX}/${gridY}`,
@@ -17,7 +17,8 @@ async function coordsToLocation(latitude, longitude) {
         display,
         office,
         gridX,
-        gridY
+        gridY,
+        zoneId
     };
 }
 

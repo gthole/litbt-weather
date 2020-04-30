@@ -5,21 +5,21 @@ import { faSearch, faLocationArrow } from '@fortawesome/free-solid-svg-icons'
 import './style.css'
 import { locationSearch, getCurrentPosition } from '../../services/location';
 
-export function SearchBar(props) {
-    const initialSearch = props.userLocation ? props.userLocation.display : '';
+export function SearchBar({userLocation, setUserLocation, setLoading, setError}) {
+    const initialSearch = userLocation ? userLocation.display : '';
     const [searchTerm, setSearchTerm] = useState(initialSearch);
 
     const handleFocus = (event) => event.target.select();
 
     async function wrap(func, ...args) {
         try {
-            props.setLoading(true);
+            setLoading(true);
             const userLocation = await func(...args);
-            props.setUserLocation(userLocation);
+            setUserLocation(userLocation);
             setSearchTerm(userLocation.display);
         } catch (err) {
             console.log(err);
-            props.setError('Could not find a location to match.');
+            setError('Could not find a location to match.');
         }
     }
 

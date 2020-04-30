@@ -3,11 +3,11 @@ import './style.css';
 import { Icon } from '../Icon';
 import { Timeline } from '../Timeline';
 
-export function Current(props) {
-    if (!props.forecast) return '';
+export function Current({forecast}) {
+    if (!forecast) return '';
 
-    const today = props.forecast.daily[0];
-    const current = props.forecast.hourly[0];
+    const today = forecast.daily[0];
+    const current = forecast.hourly[0];
     if (!current) return '';
 
     const detailed = today.detailedForecast.split('. ').map((s, i) => (
@@ -25,7 +25,7 @@ export function Current(props) {
             <div className="detailedForecast">
                 { detailed.map((s, i) => (<p key={ 'forecast-' + i }>{ s }</p>)) }
             </div>
-            <Timeline hours={ props.forecast.hourly.slice(0, 24) } />
+            <Timeline hours={ forecast.hourly.slice(0, 24) } />
         </div>
     );
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { SearchBar } from '../SearchBar';
 import { NavBar } from '../NavBar';
+import { Alerts } from '../Alerts';
 import { Current } from '../Current';
 import { Extended } from '../Extended';
 import { ErrorAlert } from '../ErrorAlert';
@@ -47,6 +48,7 @@ function App() {
                 setError={setError}
             ></SearchBar>
             <div className={'forecast container ' + (loading ? 'loading' : 'not-loading')}>
+                <Alerts forecast={forecast}></Alerts>
                 <Current forecast={forecast}></Current>
                 <Extended forecast={forecast}></Extended>
             </div>

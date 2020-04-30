@@ -1,13 +1,13 @@
 import React from 'react';
 import './style.css';
 
-export function ErrorAlert(props) {
-    if (!props.body) return '';
+export function ErrorAlert({body, dismiss}) {
+    if (!body) return '';
     return (
-        <div className="ErrorAlert" onClick={ props.dismiss }>
+        <div className="ErrorAlert" onClick={ dismiss }>
             <span className="title">Error:</span>
             <div className="body">
-                { props.body }
+                { body }
             </div>
         </div>
     );

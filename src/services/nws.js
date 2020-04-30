@@ -14,7 +14,8 @@ export async function getGridpoint(latitude, longitude) {
     return {
         office: gridPoint.properties.cwa,
         gridX: gridPoint.properties.gridX,
-        gridY: gridPoint.properties.gridY
+        gridY: gridPoint.properties.gridY,
+        zoneId: gridPoint.properties.county.split('/').slice(-1)[0]
     }
 }
 
@@ -29,13 +30,15 @@ export async function getForecast(userLocation) {
     }
 
     const resource = `/gridpoints/${office}/${gridX},${gridY}`;
-    const [daily, hourly] = await Promise.all([
+    const [alerts, daily, hourly] = await Promise.all([
+        fetchAlerts(userLocation),
         request(`${resource}/forecast`),
         request(`${resource}/forecast/hourly`)
     ]);
 
     const result = {
         key: `${office}/${gridX}/${gridY}`,
+        alerts,
         daily: daily.properties.periods,
         hourly: hourly.properties.periods
     };
@@ -48,4 +51,12 @@ export async function getForecast(userLocation) {
     sessionStorage.setItem(cacheKey, JSON.stringify(toCache));
 
     return result;
+}
+
+async function fetchAlerts(userLocation) {
+    if (!userLocation || !userLocation.zoneId) return [];
+
+    const alerts = await request(`/alerts/active/zone/${userLocation.zoneId}`);
+
+    return alerts.features;
 }

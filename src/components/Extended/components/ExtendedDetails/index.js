@@ -2,16 +2,16 @@ import React from 'react';
 import { Timeline } from '../../../Timeline';
 import './style.css';
 
-export function ExtendedDetails(props) {
+export function ExtendedDetails({day}) {
     return (
         <div className="ExtendedDetails">
             <div className="summary">
-                <strong>{ props.day.shortForecast }</strong>
+                <strong>{ day.shortForecast }</strong>
             </div>
             <div className="description">
-                { props.day.detailedForecast }
+                { day.detailedForecast }
             </div>
-            <Timeline hours={ props.day.hours } />
+            <Timeline hours={ day.hours } />
         </div>
     );
 }

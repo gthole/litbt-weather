@@ -11,13 +11,13 @@ function findRange(hourly) {
     }, [null, null]);
 }
 
-export function Extended(props) {
-    if (!props.forecast) return '';
-    const daytimes = props.forecast.daily.filter((d, i) => i !== 0 && d.isDaytime);
+export function Extended({forecast}) {
+    if (!forecast) return '';
+    const daytimes = forecast.daily.filter((d, i) => i !== 0 && d.isDaytime);
 
-    const [min, max] = findRange(props.forecast.hourly);
+    const [min, max] = findRange(forecast.hourly);
 
-    const hourlyByDay = groupBy(props.forecast.hourly, (h) => h.startTime.split('T')[0]);
+    const hourlyByDay = groupBy(forecast.hourly, (h) => h.startTime.split('T')[0]);
     daytimes.forEach(d => {
         const dayKey = d.startTime.split('T')[0];
         const dayHourly = hourlyByDay[dayKey];

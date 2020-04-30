@@ -11,14 +11,14 @@ function adjustForPercent(icon, percent, daytime) {
     return icon;
 }
 
-export function Icon(props) {
-    if (!props.icon) return '';
+export function Icon({icon, daytime}) {
+    if (!icon) return '';
 
-    const [resource, percent] = extractIcon(props.icon);
+    const [resource, percent] = extractIcon(icon);
     if (!resource) return <i className={'purple wi wi-na'}></i>;
 
-    const wicon = resource.icon[props.daytime ? 'day' : 'night'];
-    const adjusted = adjustForPercent(wicon, percent, props.daytime);
+    const wicon = resource.icon[daytime ? 'day' : 'night'];
+    const adjusted = adjustForPercent(wicon, percent, daytime);
 
     return (<i className={'purple wi wi-' + adjusted}></i>)
 }

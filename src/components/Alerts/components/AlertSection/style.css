@@ -1,0 +1,23 @@
+.AlertSection {
+    margin-bottom: 40px;
+}
+
+.AlertSection .alert-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.AlertSection .alert-headline {
+    font-weight: 10;
+    font-color: #666;
+    margin-bottom: 5px;
+    line-height: 22px;
+}
+
+.AlertSection .alert-body {
+    border-radius: 5px;
+    background-color: #cfcfcf;
+    padding: 10px;
+    color: #000;
+    line-height: 6px;
+}
