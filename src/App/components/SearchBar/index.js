@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
+import './style.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch, faLocationArrow } from '@fortawesome/free-solid-svg-icons'
-
-import './style.css'
-import { locationSearch, getCurrentPosition } from '../../services/location';
+import { locationSearch, getCurrentPosition } from '../../../services/location';
 
 export function SearchBar({userLocation, setUserLocation, setLoading, setError}) {
     const initialSearch = userLocation ? userLocation.display : '';

@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css'
-import { extractIcon } from '../../utility';
+import { extractIcon } from '../../../utility';
 
 function adjustForPercent(icon, percent, daytime) {
     if (!percent) return icon;

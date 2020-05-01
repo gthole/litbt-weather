@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
-import { Icon } from '../Icon';
-import { Timeline } from '../Timeline';
+import { Icon } from '../../common/Icon';
+import { Timeline } from '../../common/Timeline';
 
 export function Current({forecast}) {
     if (!forecast) return '';

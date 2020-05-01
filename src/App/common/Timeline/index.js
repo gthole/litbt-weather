@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-import { extractIcon, formatTime } from '../../utility';
+import { extractIcon, formatTime } from '../../../utility';
 
 export function Timeline({hours}) {
 

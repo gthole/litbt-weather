@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css'
-import { groupBy } from '../../utility';
+import { groupBy } from '../../../utility';
 import { ExtendedRow } from './components/ExtendedRow';
 
 function findRange(hourly) {

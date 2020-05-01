@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-import { Icon } from '../../../Icon';
+import { Icon } from '../../../../common/Icon';
 
 export function ForecastBar({day, max, min}) {
     function range(num) {

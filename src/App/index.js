@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { SearchBar } from '../SearchBar';
-import { NavBar } from '../NavBar';
-import { Alerts } from '../Alerts';
-import { Current } from '../Current';
-import { Extended } from '../Extended';
-import { ErrorAlert } from '../ErrorAlert';
-import { getForecast } from '../../services/nws';
+import { SearchBar } from './components/SearchBar';
+import { NavBar } from './components/NavBar';
+import { Alerts } from './components/Alerts';
+import { Current } from './components/Current';
+import { Extended } from './components/Extended';
+import { ErrorAlert } from './components/ErrorAlert';
+import { Footer } from './components/Footer';
+import { getForecast } from '../services/nws';
 import './style.css';
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
         getForecast(ul)
             .then((forecast) => {
                 setForecast(forecast);
-                setLoading(false)
+                setLoading(false);
             })
             .catch((err) => {
                 setError('Could not load the forecast. Try again later.');
@@ -47,11 +48,12 @@ function App() {
                 setLoading={setLoading}
                 setError={setError}
             ></SearchBar>
-            <div className={'forecast container ' + (loading ? 'loading' : 'not-loading')}>
+            <div className={'app-content container ' + (loading ? 'loading' : 'not-loading')}>
                 <Alerts forecast={forecast}></Alerts>
                 <Current forecast={forecast}></Current>
                 <Extended forecast={forecast}></Extended>
             </div>
+            <Footer />
         </div>
     );
 }
