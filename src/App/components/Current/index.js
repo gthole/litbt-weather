@@ -14,6 +14,11 @@ export function Current({forecast}) {
         s + (s.endsWith('.') ? '' : '.')
     ));
 
+    const hourStart = Date.now() - (Date.now() % (60 * 60 * 1000));
+    const next24 = forecast.hourly
+        .filter(h => new Date(h.startTime).valueOf() >= hourStart)
+        .slice(0, 24);
+
     return (
         <div className="Current">
             <div className="summary">
@@ -25,7 +30,7 @@ export function Current({forecast}) {
             <div className="detailedForecast">
                 { detailed.map((s, i) => (<p key={ 'forecast-' + i }>{ s }</p>)) }
             </div>
-            <Timeline hours={ forecast.hourly.slice(0, 24) } />
+            <Timeline hours={ next24 } />
         </div>
     );
 }

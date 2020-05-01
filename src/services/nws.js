@@ -45,7 +45,7 @@ export async function getForecast(userLocation) {
 
     // Store to cache
     const toCache = {
-        expire: Date.now() + (60 * 60 * 1000),
+        expire: Date.now() + (30 * 60 * 1000),
         value: result
     };
     sessionStorage.setItem(cacheKey, JSON.stringify(toCache));
