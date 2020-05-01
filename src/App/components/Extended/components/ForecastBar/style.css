@@ -28,21 +28,25 @@
     }
 }
 
-.ForecastBar .range-bar {
-    width: 100%;
-    height: 20px;
+.ForecastBar div.RangeBlock {
+    padding-top: 0;
     flex-grow: 1;
+    display: flex;
+}
+
+.ForecastBar .RangeBlock .range-bar {
+    height: 20px;
     background-color: #333;
     border-radius: 15px;
     position: relative;
 }
 
-.ForecastBar .range-bar .range-bar-prefix {
+.ForecastBar .RangeBlock .range-bar .range-bar-prefix {
     position: absolute;
     left: -35px;
 }
 
-.ForecastBar .range-bar .range-bar-suffix {
+.ForecastBar .RangeBlock .range-bar .range-bar-suffix {
     position: absolute;
     right: -38px;
 }
