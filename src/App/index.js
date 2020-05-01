@@ -19,10 +19,18 @@ function App() {
     function saveAndSetUserLocation(ul) {
         localStorage.setItem('userLocation', JSON.stringify(ul));
         setUserLocation(ul);
+        loadForecast(ul);
+    }
+
+    // Load the forecast from NWS, and set refresh on browser focus (usually cached)
+    function loadForecast(ul) {
+        if (!loading) setLoading(true);
+
         getForecast(ul)
             .then((forecast) => {
                 setForecast(forecast);
                 setLoading(false);
+                window.onfocus = () => loadForecast(ul);
             })
             .catch((err) => {
                 setError('Could not load the forecast. Try again later.');
