@@ -6,6 +6,7 @@ import { Current } from './components/Current';
 import { Extended } from './components/Extended';
 import { ErrorAlert } from './components/ErrorAlert';
 import { Footer } from './components/Footer';
+import { Loading } from './common/Loading';
 import { getForecast } from '../services/nws';
 import './style.css';
 
@@ -19,6 +20,7 @@ function App() {
     function saveAndSetUserLocation(ul) {
         localStorage.setItem('userLocation', JSON.stringify(ul));
         setUserLocation(ul);
+        setForecast(null);
         loadForecast(ul);
     }
 
@@ -57,6 +59,7 @@ function App() {
                 setError={setError}
             ></SearchBar>
             <div className={'app-content container ' + (loading ? 'loading' : 'not-loading')}>
+                <Loading show={userLocation && !forecast && loading}/>
                 <Alerts forecast={forecast}></Alerts>
                 <Current forecast={forecast}></Current>
                 <Extended forecast={forecast}></Extended>
