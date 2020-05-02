@@ -26,9 +26,9 @@
     box-shadow:
       -2.1875em 0.6875em 0 -0.6875em #fff,
       2.0625em 0.9375em 0 -0.9375em #fff,
-      0 0 0 0.375em purple,
-      -2.1875em 0.6875em 0 -0.3125em purple,
-      2.0625em 0.9375em 0 -0.5625em purple;
+      0 0 0 0.375em #999,
+      -2.1875em 0.6875em 0 -0.3125em #999,
+      2.0625em 0.9375em 0 -0.5625em #999;
 }
 .Loading .cloud:after {
     content: '';
@@ -51,7 +51,7 @@
     margin: -1.25em;
     background: #fff;
     border-radius: 50%;
-    box-shadow: 0 0 0 0.375em purple;
+    box-shadow: 0 0 0 0.375em #FDD017;
     animation: spin 12s infinite linear;
 }
 
@@ -63,9 +63,9 @@
     width: 0.375em;
     height: 1.125em;
     margin-left: -0.1875em;
-    background: purple;
+    background: #FDD017;
     border-radius: 0.25em;
-    box-shadow: 0 5.375em purple;
+    box-shadow: 0 5.375em #FDD017;
 }
 .Loading .rays:before,
 .Loading .rays:after {
@@ -78,9 +78,9 @@
     height: 1.125em;
     transform: rotate(60deg);
     transform-origin: 50% 3.25em;
-    background: purple;
+    background: #FDD017;
     border-radius: 0.25em;
-    box-shadow: 0 5.375em purple;
+    box-shadow: 0 5.375em #FDD017;
 }
 .Loading .rays:before {
     transform: rotate(120deg);

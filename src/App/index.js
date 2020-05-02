@@ -58,8 +58,8 @@ function App() {
                 setLoading={setLoading}
                 setError={setError}
             ></SearchBar>
+            <Loading show={userLocation && !forecast && loading}/>
             <div className={'app-content container ' + (loading ? 'loading' : 'not-loading')}>
-                <Loading show={userLocation && !forecast && loading}/>
                 <Alerts forecast={forecast}></Alerts>
                 <Current forecast={forecast}></Current>
                 <Extended forecast={forecast}></Extended>
