@@ -4,7 +4,9 @@ import { groupBy } from '../../../utility';
 import { ExtendedRow } from './components/ExtendedRow';
 
 function findRange(hourly) {
+    const today = new Date().toISOString().split('T')[0];
     return hourly.reduce(([min, max], h) => {
+        if (h.startTime.split('T')[0] === today) return [min, max];
         if (min === null || h.temperature < min) min = h.temperature;
         if (max === null || h.temperature > max) max = h.temperature;
         return [min, max];
