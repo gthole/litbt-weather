@@ -5,8 +5,12 @@ import { extractIcon, formatTime } from '../../../utility';
 export function Timeline({hours}) {
 
     hours.forEach((h) => {
-        const [resource] = extractIcon(h.icon);
+        const [resource, percent] = extractIcon(h.icon);
         h.key = resource ? resource.section : 'Unknown';
+        // Adjust for precipitation probability
+        if (h.key === 'Light Rain' && percent && percent < 40) {
+            h.key = 'Mostly Cloudy';
+        }
     });
 
     const sections = hours.reduce((s, h, i) => {
