@@ -6,6 +6,7 @@ import { ExtendedDetails } from '../ExtendedDetails';
 
 export function ExtendedRow({day, min, max}) {
     const [expanded, setExpanded] = useState(false);
+    if (day.hours.length < 24) return '';
 
     return (
         <div className="ExtendedRow">
