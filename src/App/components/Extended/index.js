@@ -4,9 +4,7 @@ import { groupBy } from '../../../utility';
 import { ExtendedRow } from './components/ExtendedRow';
 
 function findRange(hourly) {
-    const today = hourly[0].startTime.split('T')[0];
     return hourly.reduce(([min, max], h) => {
-        if (h.startTime.split('T')[0] === today) return [min, max];
         if (min === null || h.temperature < min) min = h.temperature;
         if (max === null || h.temperature > max) max = h.temperature;
         return [min, max];
@@ -17,9 +15,12 @@ export function Extended({forecast}) {
     if (!forecast) return '';
     const daytimes = forecast.daily.filter((d, i) => i !== 0 && d.isDaytime);
 
-    const [min, max] = findRange(forecast.hourly);
+    // Get the max/min temp for the extended forecast days
+    const today = forecast.hourly[0].startTime.split('T')[0];
+    const hours = forecast.hourly.filter(h => h.startTime.split('T')[0] !== today);
+    const [min, max] = findRange(hours);
 
-    const hourlyByDay = groupBy(forecast.hourly, (h) => h.startTime.split('T')[0]);
+    const hourlyByDay = groupBy(hours, (h) => h.startTime.split('T')[0]);
     daytimes.forEach(d => {
         const dayKey = d.startTime.split('T')[0];
         const dayHourly = hourlyByDay[dayKey];
