@@ -81,8 +81,8 @@
     },
     "snow": {
         "icon": {
-            "day": "wi-snow",
-            "night": "wi-snow"
+            "day": "snow",
+            "night": "snow"
         },
         "section": "Snow",
         "description": "Snow"
@@ -241,8 +241,8 @@
     },
     "hot": {
         "icon": {
-            "day": "wi-hot",
-            "night": "wi-hot"
+            "day": "hot",
+            "night": "hot"
         },
         "section": "Hot",
         "description": "Hot"
