@@ -67,6 +67,7 @@
     visibility: hidden
 }
 
+.Timeline .timeline-blocks .Chance-of-Rain.timeline-section-2 span,
 .Timeline .timeline-blocks .Mostly-Cloudy.timeline-section-2 span,
 .Timeline .timeline-blocks .Partly-Cloudy.timeline-section-2 span {
     visibility: hidden
@@ -99,6 +100,7 @@
     color: #fff;
 }
 
+.Timeline .timeline-blocks .Chance-of-Rain,
 .Timeline .timeline-blocks .Overcast {
     background-color: #718096;
     color: #fff;

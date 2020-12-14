@@ -8,8 +8,8 @@ export function Timeline({hours}) {
         const [resource, percent] = extractIcon(h.icon);
         h.key = resource ? resource.section : 'Unknown';
         // Adjust for precipitation probability
-        if (h.key === 'Light Rain' && percent && percent < 40) {
-            h.key = 'Mostly Cloudy';
+        if (['Light Rain', 'Rain'].includes(h.key) && percent && percent < 40) {
+            h.key = 'Chance of Rain';
         }
     });
 
@@ -30,7 +30,7 @@ export function Timeline({hours}) {
                         <div
                             key={'timeline-section-' + i}
                             style={{width: (32 * s.count) + 'px'}}
-                            className={ `timeline-section timeline-section-${s.count} ${s.key.replace(' ', '-')}` }>
+                            className={ `timeline-section timeline-section-${s.count} ${s.key.replace(/ /g, '-')}` }>
                             <span>{ s.key }</span>
                         </div>
                     ))}
