@@ -3,7 +3,7 @@
 }
 
 .Extended .section-title {
-    color: #666;
+    color: var(--text-secondary);
     text-align: center;
     text-transform: uppercase;
 }

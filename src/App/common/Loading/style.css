@@ -21,11 +21,11 @@
     width: 3.6875em;
     height: 3.6875em;
     margin: -1.84375em;
-    background: #fff;
+    background: var(--background);
     border-radius: 50%;
     box-shadow:
-      -2.1875em 0.6875em 0 -0.6875em #fff,
-      2.0625em 0.9375em 0 -0.9375em #fff,
+      -2.1875em 0.6875em 0 -0.6875em var(--background),
+      2.0625em 0.9375em 0 -0.9375em var(--background),
       0 0 0 0.375em #999,
       -2.1875em 0.6875em 0 -0.3125em #999,
       2.0625em 0.9375em 0 -0.5625em #999;
@@ -38,8 +38,8 @@
     display: block;
     width: 4.5625em;
     height: 1em;
-    background: #fff;
-    box-shadow: 0 0.4375em 0 -0.0625em #fff;
+    background: var(--background);
+    box-shadow: 0 0.4375em 0 -0.0625em var(--background);
 }
 
 .Loading .sun {
@@ -49,7 +49,7 @@
     width: 2.5em;
     height: 2.5em;
     margin: -1.25em;
-    background: #fff;
+    background: var(--background);
     border-radius: 50%;
     box-shadow: 0 0 0 0.375em #FDD017;
     animation: spin 12s infinite linear;
@@ -98,7 +98,7 @@
     width: 3.75em;
     height: 3.75em;
     margin: 0.375em 0 0 -2em;
-    background: #fff;
+    background: var(--background);
 }
 
 .Loading .rain:after {
@@ -137,27 +137,27 @@
     0% {
       background: #0cf;
       box-shadow:
-        0.625em 0.875em 0 -0.125em #fff,
-        -0.875em 1.125em 0 -0.125em #fff,
+        0.625em 0.875em 0 -0.125em var(--background),
+        -0.875em 1.125em 0 -0.125em var(--background),
         -1.375em -0.125em 0 #0cf;
     }
     25% {
       box-shadow:
-        0.625em 0.875em 0 -0.125em #fff,
+        0.625em 0.875em 0 -0.125em var(--background),
         -0.875em 1.125em 0 -0.125em #0cf,
-        -1.375em -0.125em 0 #fff;
+        -1.375em -0.125em 0 var(--background);
     }
     50% {
-      background: #fff;
+      background: var(--background);
       box-shadow:
         0.625em 0.875em 0 -0.125em #0cf,
-        -0.875em 1.125em 0 -0.125em #fff,
-        -1.375em -0.125em 0 #fff;
+        -0.875em 1.125em 0 -0.125em var(--background),
+        -1.375em -0.125em 0 var(--background);
     }
     100% {
       box-shadow:
-        0.625em 0.875em 0 -0.125em #fff,
-        -0.875em 1.125em 0 -0.125em #fff,
+        0.625em 0.875em 0 -0.125em var(--background),
+        -0.875em 1.125em 0 -0.125em var(--background),
         -1.375em -0.125em 0 #0cf;
     }
 }

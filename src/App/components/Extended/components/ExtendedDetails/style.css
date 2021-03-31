@@ -8,7 +8,7 @@
 }
 
 .ExtendedDetails .description {
-    color: #333;
+    color: var(--text-primary);
     padding: 0 10px 10px 10px;
     font-weight: 10;
 }

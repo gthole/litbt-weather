@@ -36,7 +36,7 @@
 
 .ForecastBar .RangeBlock .range-bar {
     height: 20px;
-    background-color: #333;
+    background-color: var(--background-bar);
     border-radius: 15px;
     position: relative;
 }

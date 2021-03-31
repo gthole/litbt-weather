@@ -38,7 +38,7 @@
 .Timeline .timeline-hours {
     text-align: left;
     margin-top: 8px;
-    color: #666;
+    color: var(--text-secondary);
     font-size: 12px;
 }
 
@@ -48,7 +48,7 @@
 
 .Timeline .timeline-temp {
     margin-top: 5px;
-    color: #333;
+    color: var(--text-primary);
     font-size: 16px;
 }
 
@@ -82,14 +82,17 @@
 .Timeline .timeline-blocks .Cold,
 .Timeline .timeline-blocks .Clear {
     background-color: #f7fafc;
+    color: #333;
 }
 
 .Timeline .timeline-blocks .Partly-Cloudy {
     background-color: #e2e8f0;
+    color: #333;
 }
 
 .Timeline .timeline-blocks .Mostly-Cloudy {
     background-color: #cbd5e0;
+    color: #333;
 }
 
 .Timeline .timeline-blocks .Dust,
