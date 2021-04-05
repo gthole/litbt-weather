@@ -10,16 +10,15 @@
 
 .AlertSection .alert-headline {
     font-weight: 10;
-    font-color: #666;
+    font-color: var(--text-secondary);
     margin-bottom: 5px;
     line-height: 22px;
 }
 
 .AlertSection .alert-body {
     border-radius: 5px;
-    background-color: #cfcfcf;
-    padding: 10px;
+    background-color: var(--background-secondary);
+    padding: 10px 20px;
     color: #000;
-    line-height: 6px;
     margin-bottom: 30px;
 }
