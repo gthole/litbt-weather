@@ -5,22 +5,20 @@ async function request(resource, attempts = 0) {
         await new Promise(r => setTimeout(r, 100 * (attempts + 1)));
     }
 
-    return fetch(`${base}${resource}`)
-        .then(r => {
-            if (r.status >= 500) {
-                throw new Error(r);
-            }
-            return r.json()
-        })
-        .catch((err) => {
-            console.log(err);
-            // Try a couple times before giving up, since we often get
-            // 500 errors from the NWS
-            if (err.status && err.status >= 500 && attempts < 5) {
-                return request(resource, attempts + 1);
-            }
-            throw err;
-        });
+    try {
+        const response = await fetch(`${base}${resource}`)
+        if (response.status >= 400) {
+            throw response;
+        }
+        return response.json();
+    } catch (err) {
+        // Try a couple times before giving up, since we often get
+        // 500 errors from the NWS
+        if (err.status && err.status >= 500 && attempts < 7) {
+            return request(resource, attempts + 1);
+        }
+        throw err;
+    }
 }
 
 export async function getGridpoint(latitude, longitude) {
