@@ -13,6 +13,7 @@ async function request(resource, attempts = 0) {
             return r.json()
         })
         .catch((err) => {
+            console.log(err);
             // Try a couple times before giving up, since we often get
             // 500 errors from the NWS
             if (err.status && err.status >= 500 && attempts < 5) {
