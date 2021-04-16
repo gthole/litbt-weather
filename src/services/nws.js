@@ -6,11 +6,16 @@ async function request(resource, attempts = 0) {
     }
 
     return fetch(`${base}${resource}`)
-        .then(r => r.json())
+        .then(r => {
+            if (r.status >= 500) {
+                throw new Error(r);
+            }
+            return r.json()
+        })
         .catch((err) => {
             // Try a couple times before giving up, since we often get
             // 500 errors from the NWS
-            if (err.statusCode >= 500 && attempts < 5) {
+            if (err.status && err.status >= 500 && attempts < 5) {
                 return request(resource, attempts + 1);
             }
             throw err;
